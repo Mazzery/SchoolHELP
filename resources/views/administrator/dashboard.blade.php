@@ -12,7 +12,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="assets/AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
   </div>
   @include('layouts.backend-dashboard.navbar')
   @include('layouts.backend-dashboard.sidebar')
@@ -29,7 +29,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <li class="breadcrumb-item active">Dashboard</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -46,14 +46,14 @@
           <!-- small box -->
           <div class="small-box bg-info">
             <div class="inner">
-              <h3>150</h3>
+              <h3>Submit Request</h3>
 
-              <p>New Orders</p>
+              <p>Request Assistance</p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="{{route('submit_request')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('submit_request')}}" class="small-box-footer">Register <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -61,17 +61,17 @@
           <!-- small box -->
           <div class="small-box bg-success">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <h3>Review Offer</h3>
 
-              <p>Bounce Rate</p>
+              <p>Manage Offer Status</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Register <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
-        <!-- ./col -->
+        {{-- <!-- ./col -->
         <div class="col-lg-3 col-6">
           <!-- small box -->
           <div class="small-box bg-warning">
@@ -86,26 +86,26 @@
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
-        <!-- ./col -->
+        <!-- ./col -->  --}}
         <div class="col-lg-3 col-6">
           <!-- small box -->
           <div class="small-box bg-danger">
             <div class="inner">
-              <h3>65</h3>
+              <h3>Resource Request</h3>
 
-              <p>Unique Visitors</p>
+              <p>Request Resource</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('resource_request')}}" class="small-box-footer">Submit <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
       </div>
       <!-- /.row -->
       <!-- Main row -->
-      <div class="row">
+      {{--<div class="row">
         <!-- Left col -->
         <section class="col-lg-7 connectedSortable">
           <!-- Custom tabs (Charts with tabs)-->
@@ -170,7 +170,7 @@
                     <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                   </div>
                   <!-- /.direct-chat-infos -->
-                  <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image">
+                  <img class="direct-chat-img" src="assets/AdminLTE/dist/img/user1-128x128.jpg" alt="message user image">
                   <!-- /.direct-chat-img -->
                   <div class="direct-chat-text">
                     Is this template really for free? That's unbelievable!
@@ -186,7 +186,7 @@
                     <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                   </div>
                   <!-- /.direct-chat-infos -->
-                  <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image">
+                  <img class="direct-chat-img" src="assets/AdminLTE/dist/img/user3-128x128.jpg" alt="message user image">
                   <!-- /.direct-chat-img -->
                   <div class="direct-chat-text">
                     You better believe it!
@@ -202,7 +202,7 @@
                     <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
                   </div>
                   <!-- /.direct-chat-infos -->
-                  <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image">
+                  <img class="direct-chat-img" src="assets/AdminLTE/dist/img/user1-128x128.jpg" alt="message user image">
                   <!-- /.direct-chat-img -->
                   <div class="direct-chat-text">
                     Working with AdminLTE on a great new app! Wanna join?
@@ -218,7 +218,7 @@
                     <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
                   </div>
                   <!-- /.direct-chat-infos -->
-                  <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image">
+                  <img class="direct-chat-img" src="assets/AdminLTE/dist/img/user3-128x128.jpg" alt="message user image">
                   <!-- /.direct-chat-img -->
                   <div class="direct-chat-text">
                     I would love to.
@@ -235,7 +235,7 @@
                 <ul class="contacts-list">
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="dist/img/user1-128x128.jpg" alt="User Avatar">
+                      <img class="contacts-list-img" src="assets/AdminLTE/dist/img/user1-128x128.jpg" alt="User Avatar">
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
@@ -250,7 +250,7 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="dist/img/user7-128x128.jpg" alt="User Avatar">
+                      <img class="contacts-list-img" src="assets/AdminLTE/dist/img/user7-128x128.jpg" alt="User Avatar">
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
@@ -265,7 +265,7 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="dist/img/user3-128x128.jpg" alt="User Avatar">
+                      <img class="contacts-list-img" src="assets/AdminLTE/dist/img/user3-128x128.jpg" alt="User Avatar">
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
@@ -280,7 +280,7 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="dist/img/user5-128x128.jpg" alt="User Avatar">
+                      <img class="contacts-list-img" src="assets/AdminLTE/dist/img/user5-128x128.jpg" alt="User Avatar">
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
@@ -295,7 +295,7 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="dist/img/user6-128x128.jpg" alt="User Avatar">
+                      <img class="contacts-list-img" src="assets/AdminLTE/dist/img/user6-128x128.jpg" alt="User Avatar">
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
@@ -310,7 +310,7 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="dist/img/user8-128x128.jpg" alt="User Avatar">
+                      <img class="contacts-list-img" src="assets/AdminLTE/dist/img/user8-128x128.jpg" alt="User Avatar">
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
@@ -620,8 +620,8 @@
     </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
-  </div>
-  @include('layouts.backend-dashboard.footer')
+  </div> --}}
+  {{-- @include('layouts.backend-dashboard.footer') --}}
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

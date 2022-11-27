@@ -49,8 +49,8 @@
           </div>
         </div> --}}
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Student Level" id=level @error('level') is-invalid @enderror name="level" value="{{ old('level') }}" required autocomplete="level" autofocus>
-          @error('level')
+          <input type="text" class="form-control" placeholder="Resource Type" id=type @error('type') is-invalid @enderror name="type" value="{{ old('type') }}" required autocomplete="type" autofocus>
+          @error('type')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
@@ -74,8 +74,8 @@
           </div>
         </div> --}}
         <div class="input-group mb-3">
-          <input type="number" class="form-control" placeholder="Number of Student" id=studentnum  @error('studentnum') is-invalid @enderror name="studentnum" value="{{ old('studentnum') }}" required autocomplete="studentnum" autofocus>
-          @error('studentnum')
+          <input type="number" class="form-control" placeholder="Number of Resource" id=resourcenum  @error('resourcenum') is-invalid @enderror name="resourcenum" value="{{ old('resourcenum') }}" required autocomplete="resourcenum" autofocus>
+          @error('resourcenum')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
@@ -85,7 +85,7 @@
             </div>
           </div>
         </div>
-        <div class="input-group mb-3">
+        {{-- <div class="input-group mb-3">
           <input type="date" class="form-control" placeholder="Proposed Date" id=date  @error('date') is-invalid @enderror name="date" value="{{ old('date') }}" required autocomplete="date">
           @error('date')
             <span class="invalid-feedback" role="alert">
@@ -96,7 +96,7 @@
             <div class="input-group-text">
             </div>
           </div>
-        </div>
+        </div> --}}
 
     
         {{-- <div class="input-group mb-3">

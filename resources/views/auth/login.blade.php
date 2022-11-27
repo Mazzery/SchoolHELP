@@ -50,7 +50,31 @@
                                 </div>
                             </div>
                         </div>
+                        <ul class="row mb-3">
+                            <li class="col-md-6 offset-md-3">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="help_admin" value="option1">
+                                    <label class="form-check-label" for="help_admin">
+                                      Help Admin
+                                    </label>
+                                  </div>
 
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="administrator" value="option2">
+                                    <label class="form-check-label" for="administrator">
+                                      Administrator
+                                    </label>
+                                  </div>
+
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="volunteer" value="option3">
+                                    <label class="form-check-label" for="volunteer">
+                                      Volunteer
+                                    </label>
+                                  </div>
+                            </li>
+                        </ul>
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

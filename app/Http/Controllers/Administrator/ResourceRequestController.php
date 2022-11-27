@@ -5,9 +5,8 @@ namespace App\Http\Controllers\Administrator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
 
-class SubmitRequestController extends Controller
+class ResourceRequestController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +16,7 @@ class SubmitRequestController extends Controller
     public function index()
     {
         //
-        return view('administrator.submit_request');
+        return view('administrator.resource_request');
     }
 
     /**
@@ -30,20 +29,17 @@ class SubmitRequestController extends Controller
         //
     }
 
-    public function submitRequest(Request $request) {
-        $database = DB::table('request_data')->insert([
-            'request_description' => $request->description,
-            'proposed_date' => $request->date,
-            'student_level' => $request->level,
-            'number_of_student' => $request->studentnum,
-            'status' => 'NEW',
+    public function resourceRequest(Request $request) {
+        $database = DB::table('resource_data')->insert([
+            'resource_description' => $request->description,
+            'resource_type' => $request->type,
+            'resource_number' => $request->resourcenum,
             'created_at' => now(),
         ]);
-        echo "<script>alert('Submitted Request');</script>";
+        echo "<script>alert('Submitted Resource Request');</script>";
         //return view ('layouts.backend-dashboard.app');
         return redirect()->route('administrator_dashboard');
     }
-
     /**
      * Store a newly created resource in storage.
      *

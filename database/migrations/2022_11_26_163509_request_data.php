@@ -20,6 +20,7 @@ return new class extends Migration
             $table->date('proposed_date');
             $table->string('student_level');
             $table->integer('number_of_student');
+            $table->string('status');
             $table->timestamp('created_at')->nullable();
         });
     }
