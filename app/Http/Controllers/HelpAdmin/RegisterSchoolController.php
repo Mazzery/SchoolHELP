@@ -27,7 +27,8 @@ class RegisterSchoolController extends Controller
             'created_at' => now(),
         ]);
         echo "<script>alert('School added');</script>";
-        return view ('helpadmin.register_admin');
+        //return view ('layouts.backend-dashboard.app');
+        return redirect()->route('registerschooladmin');
     }
 
     /**
