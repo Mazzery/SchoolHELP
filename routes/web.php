@@ -26,3 +26,10 @@ Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'inde
 
 Route::get('/registerschool', [App\Http\Controllers\HelpAdmin\RegisterSchoolController::class, 'index'])->name('registerschool');
 Route::post('/registerschool', [App\Http\Controllers\HelpAdmin\RegisterSchoolController::class, 'addSchool']);
+
+
+
+Route::get('/testreg', [App\Http\Controllers\HelpAdmin\TemporaryRegAdmin::class, 'index']);
+Route::get('/regad', [App\Http\Controllers\HelpAdmin\RegisterAdministratorController::class, 'index']);
+
+Route::get('/regvol', [App\Http\Controllers\Volunteer\RegisterVolunteerController::class, 'index']);
