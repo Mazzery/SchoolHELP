@@ -22,15 +22,17 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'addVolunteer'])->name('register');
 
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index']);
+Route::group(['middleware' => ['auth', 'checkrole:school_help_admin']], function () {
+    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index']);
+    Route::get('/registerschool', [App\Http\Controllers\HelpAdmin\RegisterSchoolController::class, 'index'])->name('registerschool');
+    Route::get('/registerschooladmin', [App\Http\Controllers\HelpAdmin\RegisterAdministratorController::class, 'index'])->name('registerschooladmin');
+    Route::post('/registerschool', [App\Http\Controllers\HelpAdmin\RegisterSchoolController::class, 'addSchool']);
+    Route::post('/registerschooladmin', [App\Http\Controllers\HelpAdmin\RegisterAdministratorController::class, 'addAdmin']);
+});
 
-Route::get('/registerschool', [App\Http\Controllers\HelpAdmin\RegisterSchoolController::class, 'index'])->name('registerschool');
-Route::post('/registerschool', [App\Http\Controllers\HelpAdmin\RegisterSchoolController::class, 'addSchool']);
-Route::get('/registerschooladmin', [App\Http\Controllers\HelpAdmin\RegisterAdministratorController::class, 'index'])->name('registerschooladmin');
-Route::post('/registerschooladmin', [App\Http\Controllers\HelpAdmin\RegisterAdministratorController::class, 'addAdmin']);
-
-
-Route::get('/testreg', [App\Http\Controllers\HelpAdmin\TemporaryRegAdmin::class, 'index']);
-Route::get('/regad', [App\Http\Controllers\HelpAdmin\RegisterAdministratorController::class, 'index']);
-Route::get('/regvol', [App\Http\Controllers\Volunteer\RegisterVolunteerController::class, 'index']);
+Route::group(['middleware' => ['auth', 'checkrole:school_admin']], function () {
+    Route::get('/administratordashboard', [App\Http\Controllers\Administrator\DashboardController::class, 'index'])->name('administrator_dashboard');
+    Route::get('/submitrequest', [App\Http\Controllers\Administrator\SubmitRequestController::class, 'index'])->name('submit_request');
+});

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SchoolHELP | School Administrator Registration Page</title>
+  <title>SchoolHELP | Volunteer Registration Page</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -23,7 +23,7 @@
 
   <div class="card">
     <div class="card-body register-card-body">
-      <p class="login-box-msg">Register a School Administrator</p>
+      <p class="login-box-msg">Register As a Volunteer</p>
 
       <form method="post">
         @csrf
@@ -86,8 +86,8 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Staff-ID" id=staffID  @error('staffID') is-invalid @enderror name="staffID" value="{{ old('staffID') }}" required autocomplete="StaffID" autofocus>
-          @error('staffID')
+          <input type="date" class="form-control" placeholder="Date Of Birth" id=date_of_birth  @error('date_of_birth') is-invalid @enderror name="date_of_birth" value="{{ old('date_of_birth') }}" required autocomplete="date_of_birth">
+          @error('date_of_birth')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
@@ -97,9 +97,11 @@
             </div>
           </div>
         </div>
+
+    
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Admin Position" id=position  @error('position') is-invalid @enderror name="position" value="{{ old('position') }}" required autocomplete="position" autofocus>
-          @error('position')
+          <input type="text" class="form-control" placeholder="Occupation" id=occupation  @error('occupation') is-invalid @enderror name="occupation" value="{{ old('occupation') }}" required autocomplete="occupation" autofocus>
+          @error('occupation')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
@@ -132,15 +134,3 @@
 <script src="assets/AdminLTE/dist/js/adminlte.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
