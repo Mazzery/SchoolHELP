@@ -24,7 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'addVolunteer'])->name('register');
 
-//Route::group(['middleware' => ['auth', 'CheckRole:school_help_admin']], function () {
+//Route::group(['middleware' => ['auth', 'RoleAuthenticateLogin:school_help_admin']], function () {
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('help_admin_dashboard');
     Route::get('/registerschool', [App\Http\Controllers\HelpAdmin\RegisterSchoolController::class, 'index'])->name('registerschool');
     Route::get('/registerschooladmin', [App\Http\Controllers\HelpAdmin\RegisterAdministratorController::class, 'index'])->name('registerschooladmin');
@@ -32,7 +32,7 @@ Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, '
     Route::post('/registerschooladmin', [App\Http\Controllers\HelpAdmin\RegisterAdministratorController::class, 'addAdmin']);
 //});
 
-//Route::group(['middleware' => ['auth', 'checkrole:school_admin']], function () {
+//Route::group(['middleware' => ['auth', 'RoleAuthenticateLogin:school_admin']], function () {
     Route::get('/administratordashboard', [App\Http\Controllers\Administrator\DashboardController::class, 'index'])->name('administrator_dashboard');
     Route::get('/submitrequest', [App\Http\Controllers\Administrator\SubmitRequestController::class, 'index'])->name('submit_request');
     Route::get('/resourcerequest', [App\Http\Controllers\Administrator\ResourceRequestController::class, 'index'])->name('resource_request');
