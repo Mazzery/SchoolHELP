@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('phone_number')->nullable();
             $table->string('occupation')->nullable();
             $table->date('date_of_birth')->nullable();
-            $table->tinyInteger('type')->default(0);
+            $table->tinyInteger('role')->default(0);
             //0 = volunteer, 1 = schoolhelpadmin, 2 = schooladmin
             $table->string('username')->nullable();
             $table->string('email')->unique();
@@ -42,3 +42,4 @@ return new class extends Migration
         Schema::dropIfExists('users');
     }
 };
+
