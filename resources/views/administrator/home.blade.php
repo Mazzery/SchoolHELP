@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="/assets/AdminLTE/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="/assets/AdminLTE/plugins/summernote/summernote-bs4.min.css">
-  <link rel="stylesheet" href="SchoolH.css">
+  <link rel="stylesheet" href="/resources/css/SchoolH.css">
 
 </head>
 <div class="wrapper">
@@ -50,15 +50,9 @@
     <ul class="navbar-nav ml-auto">
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
+        <a class="nav-link" data-toggle="dropdown" href="{{ route('logout') }}">
           <i class="ion-log-out"></i>
         </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
       <li class="nav-item">
         </a>
       </li>
@@ -161,11 +155,11 @@
               <div class="icon">
                 <i class="ion ion-plus"></i>
               </div>
-              <button onclick="TestsFunction()">test</button>
+              <a href="#"><button class="button">submit</button></a>
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-3 col-6"> 
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
@@ -174,8 +168,8 @@
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
-              </div>
-              <button onclick="TestsFunction()">test</button>
+                </div>
+              <a href="#"><button class="button">submit</button></a>
             </div>
           </div>
           <!-- ./col -->
@@ -184,137 +178,6 @@
           </div>
           <div class="col-lg-3 col-6">
               </div>
-        </div>
-
-<div id="TestsDiv" style="display:none">
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">
-              <i class="ion ion-clipboard mr-1"></i>
-              Submitted Request lists
-            </h3>
-
-            <div class="card-tools">
-              <ul class="pagination pagination-sm">
-                <li class="page-item"><a href="#" class="page-link">&laquo;</a></li>
-                <li class="page-item"><a href="#" class="page-link">1</a></li>
-                <li class="page-item"><a href="#" class="page-link">2</a></li>
-                <li class="page-item"><a href="#" class="page-link">3</a></li>
-                <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- /.card-header -->
-          <div class="card-body">
-            <ul class="todo-list" data-widget="todo-list">
-              <li>
-                <!-- drag handle -->
-                <span class="handle">
-                  <i class="fas fa-ellipsis-v"></i>
-                  <i class="fas fa-ellipsis-v"></i>
-                </span>
-                <!-- checkbox -->
-                <div  class="icheck-primary d-inline ml-2">
-                  <input type="checkbox" value="" name="todo1" id="todoCheck1">
-                  <label for="todoCheck1"></label>
-                </div>
-                <!-- todo text -->
-                <span class="text">Bali Kiddy School || Requested to ....</span>
-                <!-- Emphasis label -->
-                <small class="badge badge-danger"><i class="far fa-clock"></i> 1 hour</small>
-                <!-- General tools such as edit or delete-->
-                <div class="tools">
-                  <i class="fas fa-edit"></i>
-                  <i class="fas fa-trash-o"></i>
-                </div>
-              </li>
-              <li>
-                <span class="handle">
-                  <i class="fas fa-ellipsis-v"></i>
-                  <i class="fas fa-ellipsis-v"></i>
-                </span>
-                <div  class="icheck-primary d-inline ml-2">
-                  <input type="checkbox" value="" name="todo2" id="todoCheck2" checked>
-                  <label for="todoCheck2"></label>
-                </div>
-                <span class="text">Bali Island School || Requested to ....</span>
-                <small class="badge badge-info"><i class="far fa-clock"></i> 3 days</small>
-                <div class="tools">
-                  <i class="fas fa-edit"></i>
-                  <i class="fas fa-trash-o"></i>
-                </div>
-              </li>
-              <li>
-                <span class="handle">
-                  <i class="fas fa-ellipsis-v"></i>
-                  <i class="fas fa-ellipsis-v"></i>
-                </span>
-                <div  class="icheck-primary d-inline ml-2">
-                  <input type="checkbox" value="" name="todo3" id="todoCheck3">
-                  <label for="todoCheck3"></label>
-                </div>
-                <span class="text">International School || Requested to ....</span>
-                <small class="badge badge-warning"><i class="far fa-clock"></i> 1 day</small>
-                <div class="tools">
-                  <i class="fas fa-edit"></i>
-                  <i class="fas fa-trash-o"></i>
-                </div>
-              </li>
-              <li>
-                <span class="handle">
-                  <i class="fas fa-ellipsis-v"></i>
-                  <i class="fas fa-ellipsis-v"></i>
-                </span>
-                <div  class="icheck-primary d-inline ml-2">
-                  <input type="checkbox" value="" name="todo4" id="todoCheck4">
-                  <label for="todoCheck4"></label>
-                </div>
-                <span class="text">Pelita Hati || Requested to ....</span>
-                <small class="badge badge-success"><i class="far fa-clock"></i> 3 days</small>
-                <div class="tools">
-                  <i class="fas fa-edit"></i>
-                  <i class="fas fa-trash-o"></i>
-                </div>
-              </li>
-              <li>
-                <span class="handle">
-                  <i class="fas fa-ellipsis-v"></i>
-                  <i class="fas fa-ellipsis-v"></i>
-                </span>
-                <div  class="icheck-primary d-inline ml-2">
-                  <input type="checkbox" value="" name="todo5" id="todoCheck5">
-                  <label for="todoCheck5"></label>
-                </div>
-                <span class="text">Wood School Bali || Requested to ....</span>
-                <small class="badge badge-primary"><i class="far fa-clock"></i> 1 week</small>
-                <div class="tools">
-                  <i class="fas fa-edit"></i>
-                  <i class="fas fa-trash-o"></i>
-                </div>
-              </li>
-              <li>
-                <span class="handle">
-                  <i class="fas fa-ellipsis-v"></i>
-                  <i class="fas fa-ellipsis-v"></i>
-                </span>
-                <div  class="icheck-primary d-inline ml-2">
-                  <input type="checkbox" value="" name="todo6" id="todoCheck6">
-                  <label for="todoCheck6"></label>
-                </div>
-                <span class="text">Sunrise School</span>
-                <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 month</small>
-                <div class="tools">
-                  <i class="fas fa-edit"></i>
-                  <i class="fas fa-trash-o"></i>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <!-- /.card-body -->
-          <div class="card-footer clearfix">
-            <button type="button" class="btn btn-primary float-right"><i class="fas fa-minus"></i> Cancel</button>
-          </div>
-        </div>
         <!-- /.card -->
       </div>        
               <!-- /.card-body-->

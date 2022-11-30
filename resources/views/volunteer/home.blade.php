@@ -31,9 +31,6 @@
 <div class="wrapper">
 
   <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="helplogo.png" alt="AdminLTELogo" height="120" width="140">
-  </div>
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -70,7 +67,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index.html" class="brand-link">
-      <img src="helplogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .9">
+      <img src="/extcss/help.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .9">
       <span class="brand-text font-weight-light">SchoolHelp</span>
     </a>
 
@@ -118,7 +115,7 @@
             <a href="pages/calendar.html" class="nav-link">
               <i class="nav-icon fas fa-plus"></i>
               <p>
-                Add School Admi
+                Add School Admin
                 <span class="badge badge-info right">2</span>
               </p>
             </a>
@@ -179,11 +176,6 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-          </div>
-          <div class="col-lg-3 col-6">
-              </div>
         </div>
 
 <div id="TestsDiv" style="display:none">
@@ -361,6 +353,6 @@
 <!-- overlayScrollbars -->
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
+<script src="/assets/AdminLTE/dist/js/adminlte.js"></script>
 </body>
 </html>
