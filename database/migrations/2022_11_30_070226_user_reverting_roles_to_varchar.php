@@ -19,8 +19,7 @@ return new class extends Migration
             $table->string('phone_number')->nullable();
             $table->string('occupation')->nullable();
             $table->date('date_of_birth')->nullable();
-            $table->tinyInteger('type')->default(0);
-            //0 = volunteer, 1 = schoolhelpadmin, 2 = schooladmin
+            $table->string('role')->default('volunteer');
             $table->string('username')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -39,6 +38,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::table('varchar', function (Blueprint $table) {
+            //
+        });
     }
 };
