@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/AdminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="assets/AdminLTE/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="/extcss/style2.css">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
