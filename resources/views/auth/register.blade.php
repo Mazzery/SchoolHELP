@@ -175,7 +175,7 @@
                     
                     <div class="container mx-10 text-center",>
                         <div class="col-md-20 text-center">
-                        <button type="submit" class="btn btn-primary btn-block" value="Submit">Register School</button>
+                        <button type="submit" class="btn btn-primary btn-block" value="Submit">Register</button>
                         </div>
                         <!-- /.col -->
                     </div>

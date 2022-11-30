@@ -2,7 +2,7 @@
 <html>  
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
+        <title>Welcome Page</title>
         <link rel="stylesheet" href="/extcss/style1.css">
         <link rel="stylesheet" href="assets/AdminLTE/dist/css/adminlte.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,14 +15,13 @@
                 <img src="/extcss/help.png" class="logo">
                 <nav>
                     <ul>
-                        <li><a href="{{route('welcome')}}">HOME</a></li>
-                        <li><a href="Login.html">LOGIN</a></li>
+                        <li><a href="{{route('login')}}">LOGIN</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="content">
                 <h2>WELCOME TO </h2>
-                <h1>SCHOOL HELP</h1>
+                <h1>School<b>HELP</b></h1>
                 <p>a web-based school aid distribution and tutorial scheduling system <br> was designed to alleviate the negative impact of the coronavirus pandemic to schools and students. </p>
                 <div><a href="{{route('register')}}">
                     <button type ="button"><span></span>REGISTER NOW</button></a>
