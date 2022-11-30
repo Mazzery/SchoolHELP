@@ -50,12 +50,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    protected function role() : Attribute
-    {
-        return new Attribute(
-            get: fn ($value) =>  ["volunteer", "school_help_admin", "school_admin"][$value],
-        );
-    }
 }
 
 
