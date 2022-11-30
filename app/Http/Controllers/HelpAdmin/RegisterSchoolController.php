@@ -28,7 +28,7 @@ class RegisterSchoolController extends Controller
         ]);
         echo "<script>alert('School added');</script>";
         //return view ('layouts.backend-dashboard.app');
-        return redirect()->route('help_admin_dashboard');
+        return redirect()->route('help_admin_home');
     }
 
     /**

@@ -25,15 +25,10 @@
   <link rel="stylesheet" href="/assets/AdminLTE/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="/assets/AdminLTE/plugins/summernote/summernote-bs4.min.css">
-  <link rel="stylesheet" href="SchoolH.css">
+  <link rel="stylesheet" href="/extcss/SchoolH.css">
 
 </head>
 <div class="wrapper">
-
-  <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="helplogo.png" alt="AdminLTELogo" height="120" width="140">
-  </div>
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -50,13 +45,8 @@
     <ul class="navbar-nav ml-auto">
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
+      <a class="nav-link" href="{{ route('logout') }}">
           <i class="ion-log-out"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
       <li class="nav-item">
@@ -70,7 +60,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index.html" class="brand-link">
-      <img src="helplogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .9">
+      <img src="/extcss/help.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .9">
       <span class="brand-text font-weight-light">SchoolHelp</span>
     </a>
 
@@ -106,7 +96,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="{{ route('registerschool') }}" class="nav-link">
               <i class="nav-icon fas fa-plus"></i>
               <p>
                 Register a School
@@ -115,10 +105,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{ route('registerschooladmin') }}" class="nav-link">
               <i class="nav-icon fas fa-plus"></i>
               <p>
-                Add School Admi
+                Add School Admin
                 <span class="badge badge-info right">2</span>
               </p>
             </a>
@@ -153,7 +143,7 @@
         <div class="row">
           <div class="col-lg-3 col-7">
             <!-- small box -->
-            <div class="small-box bg-info">
+            <div class="small-box bg-info" >
               <div class="inner">
                 <h3>REGISTER</h3>
                 <p>A School</p>
@@ -161,7 +151,7 @@
               <div class="icon">
                 <i class="ion ion-plus"></i>
               </div>
-              <button onclick="TestsFunction()">test</button>
+              <a href="{{ route('registerschool') }}"><button >CLICK!</button></a>
             </div>
           </div>
           <!-- ./col -->
@@ -174,8 +164,8 @@
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
-              </div>
-              <button onclick="TestsFunction()">test</button>
+                </div>
+              <a href="{{ route('registerschooladmin') }}"><button >CLICK!</button></a>
             </div>
           </div>
           <!-- ./col -->
@@ -344,23 +334,21 @@
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <!-- jQuery -->
-  <script src="plugins/jquery/jquery.min.js"></script>
+<script src="/assets/AdminLTE/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Sparkline -->
-<script src="plugins/sparklines/sparkline.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="/assets/AdminLTE/plugins/sparklines/sparkline.js"></script>
 <!-- daterangepicker -->
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<script src="/assets/AdminLTE/plugins/moment/moment.min.js"></script>
+<script src="/assets/AdminLTE/plugins/daterangepicker/daterangepicker.js"></script>
 <!-- Tempusdominus Bootstrap 4 -->
-<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="/assets/AdminLTE/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 <!-- Summernote -->
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<script src="/assets/AdminLTE/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="/assets/AdminLTE/plugins/overlayScrollbars/js/OverlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
+<script src="/assets/AdminLTE/dist/js/adminlte.js"></script>
 </body>
 </html>

@@ -41,7 +41,7 @@ class SubmitRequestController extends Controller
         ]);
         echo "<script>alert('Submitted Request');</script>";
         //return view ('layouts.backend-dashboard.app');
-        return redirect()->route('administrator_dashboard');
+        return redirect()->route('school_admin_home');
     }
 
     /**
