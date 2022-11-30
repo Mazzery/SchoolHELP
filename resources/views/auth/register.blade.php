@@ -79,7 +79,7 @@
         <div class="col-md-3">
             <div class="register-box">
                 <div class="register-logo">
-                    <a href="#">School<b>HELP</b></a>
+                    School<b>HELP</b>
                 </div>
             
                 <div class="card">
