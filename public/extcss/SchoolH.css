@@ -15,7 +15,11 @@ button {
     margin: 20px 10px;
     font-weight: bold;
     border: 2px solid #ffffff;
-    color: rgb(0, 0, 0);
+    color: rgb(105, 105, 105);
     cursor: pointer; 
     overflow: hidden;
+}
+
+.tutor:hover{
+    color: rgb(1, 0, 0);
 }

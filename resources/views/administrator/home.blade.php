@@ -64,7 +64,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index.html" class="brand-link">
-      <img src="https://e7.pngegg.com/pngimages/60/441/png-clipart-orange-h-logo-hosted-graphite-logo-icons-logos-emojis-tech-companies-thumbnail.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="/extcss/help.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">SchoolHelp</span>
     </a>
 
@@ -104,7 +104,6 @@
               <i class="nav-icon fas fa-plus"></i>
               <p>
                 Submit a Request
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
@@ -112,8 +111,7 @@
             <a href="{{ route('submit_request') }}" class="nav-link">
               <i class="nav-icon fas fa-plus"></i>
               <p>
-                View all Request
-                <span class="badge badge-info right">2</span>
+                View all Requests
               </p>
             </a>
       </nav>
@@ -155,7 +153,8 @@
               <div class="icon">
                 <i class="ion ion-plus"></i>
                 </div>
-              <a href="{{ route('submit_request') }}"><button class="tutor" >CLICK!</button></a>
+                <div class ="col-md-12 text-center">
+              <a href="{{ route('submit_request') }}"><button class="tutor" >SELECT</button></a></div>
             </div>
           </div>
           <!-- ./col -->
@@ -169,13 +168,11 @@
               <div class="icon">
                 <i class="ion ion-person-add"></i>
                 </div>
-              <a href="{{ route('resource_request') }}"><button class="tutor" >CLICK!</button></a>
+                <div class ="col-md-12 text-center">
+              <a href="{{ route('resource_request') }}"><button class="tutor" >SELECT</button></a></div>
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-          </div>
           <div class="col-lg-3 col-6">
               </div>
         <!-- /.card -->

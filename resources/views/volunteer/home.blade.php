@@ -153,7 +153,7 @@
               <div class="icon">
                 <i class="ion ion-plus"></i>
               </div>
-              <button onclick="TestsFunction()">test</button>
+              <a href="{{ route('submit_request') }}"><button class="tutor" >SELECT</button></a>
             </div>
           </div>
           <!-- ./col -->
@@ -167,7 +167,7 @@
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <button onclick="TestsFunction()">test</button>
+              <a href="{{ route('submit_request') }}"><button class="tutor" >SELECT</button></a>
             </div>
           </div>
           <!-- ./col -->

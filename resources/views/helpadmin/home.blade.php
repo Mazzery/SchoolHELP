@@ -100,7 +100,6 @@
               <i class="nav-icon fas fa-plus"></i>
               <p>
                 Register a School
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
@@ -109,7 +108,6 @@
               <i class="nav-icon fas fa-plus"></i>
               <p>
                 Add School Admin
-                <span class="badge badge-info right">2</span>
               </p>
             </a>
       </nav>
@@ -151,7 +149,8 @@
               <div class="icon">
                 <i class="ion ion-plus"></i>
               </div>
-              <a href="{{ route('registerschool') }}"><button >CLICK!</button></a>
+              <div class ="col-md-12 text-center">
+              <a href="{{ route('registerschool') }}"><button class="tutor">SELECT</button></a></div>
             </div>
           </div>
           <!-- ./col -->
@@ -165,7 +164,8 @@
               <div class="icon">
                 <i class="ion ion-person-add"></i>
                 </div>
-              <a href="{{ route('registerschooladmin') }}"><button >CLICK!</button></a>
+                <div class ="col-md-12 text-center">
+              <a href="{{ route('registerschooladmin') }}"><button class="tutor">SELECT</button></a></div>
             </div>
           </div>
           <!-- ./col -->
