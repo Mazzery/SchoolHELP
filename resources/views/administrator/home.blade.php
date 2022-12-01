@@ -100,7 +100,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="{{ route('submit_request') }}" class="nav-link">
               <i class="nav-icon fas fa-plus"></i>
               <p>
                 Submit a Request
@@ -109,7 +109,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{ route('submit_request') }}" class="nav-link">
               <i class="nav-icon fas fa-plus"></i>
               <p>
                 View all Request
@@ -155,7 +155,7 @@
               <div class="icon">
                 <i class="ion ion-plus"></i>
                 </div>
-              <a href="{{ route('submit_request') }}"><button >CLICK!</button></a>
+              <a href="{{ route('submit_request') }}"><button class="tutor" >CLICK!</button></a>
             </div>
           </div>
           <!-- ./col -->
@@ -169,7 +169,7 @@
               <div class="icon">
                 <i class="ion ion-person-add"></i>
                 </div>
-              <a href="{{ route('resource_request') }}"><button >CLICK!</button></a>
+              <a href="{{ route('resource_request') }}"><button class="tutor" >CLICK!</button></a>
             </div>
           </div>
           <!-- ./col -->
