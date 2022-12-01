@@ -38,7 +38,7 @@ class ResourceRequestController extends Controller
         ]);
         echo "<script>alert('Submitted Resource Request');</script>";
         //return view ('layouts.backend-dashboard.app');
-        return redirect()->route('administrator_dashboard');
+        return redirect()->route('school_admin_home');
     }
     /**
      * Store a newly created resource in storage.

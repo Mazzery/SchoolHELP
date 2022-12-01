@@ -27,7 +27,7 @@ class RegisterAdministratorController extends Controller
             'role' => 'administrator',
         ]);
         echo "<script>alert('Admin added');</script>";
-        return redirect()->route('home');
+        return redirect()->route('help_admin_home');
         //return view ('layouts.backend-dashboard.app');
     }
 }
