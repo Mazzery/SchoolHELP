@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('phone_number')->nullable();
             $table->string('occupation')->nullable();
             $table->date('date_of_birth')->nullable();
-            $table->tinyInteger('type')->default(0);
+            $table->string('role')->default('volunteer');
             //0 = volunteer, 1 = schoolhelpadmin, 2 = schooladmin
             $table->string('username')->nullable();
             $table->string('email')->unique();
@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('password');
             $table->integer('staffID')->nullable();
             $table->string('position')->nullable();
+            $table->string('school')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

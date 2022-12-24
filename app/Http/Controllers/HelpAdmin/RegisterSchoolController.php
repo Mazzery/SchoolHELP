@@ -26,9 +26,7 @@ class RegisterSchoolController extends Controller
             'school_city' => $request->school_city,
             'created_at' => now(),
         ]);
-        echo "<script>alert('School added');</script>";
-        //return view ('layouts.backend-dashboard.app');
-        return redirect()->route('help_admin_home');
+        return redirect()->route('help_admin_home')->with('success','School Has Been Successfully Registered');
     }
 
     /**
