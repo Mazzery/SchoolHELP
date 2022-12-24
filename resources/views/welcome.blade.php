@@ -2,7 +2,7 @@
 <html>  
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome Page</title>
+        <title>School HELP</title>
         <link rel="stylesheet" href="/extcss/style1.css">
         <link rel="stylesheet" href="assets/AdminLTE/dist/css/adminlte.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -46,7 +46,21 @@
 		</div>
 
 		<div class="box">
+            @foreach ($request as $request)
 			<div class="card">
+                <i class="far fa-user"></i>
+				<h5> Request</h5>
+				<div class="pra">
+					<p>{{$request->request_description}}</p>
+					<p style="text-align: center;">
+						<a class="btton" href="#">View Request</a>
+					</p>
+				</div>
+			</div>
+            @endforeach
+        </div>
+
+            {{-- <div class="card">
                 <i class="far fa-user"></i>
 				<h5> I Want Glue For Kids</h5>
 				<div class="pra">
@@ -79,7 +93,7 @@
 						<a class="btton" href="#">Visit School</a>
 					</p>
 				</div>
-			</div>
+			</div> --}}
 		</div>
 	</div>
 

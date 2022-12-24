@@ -97,7 +97,7 @@
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
-            </div>
+            </div>  
             <a href="{{route('resource_request')}}" class="small-box-footer">Submit <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>

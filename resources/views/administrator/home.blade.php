@@ -140,6 +140,11 @@
 
     <!-- Main content -->
     <section class="content">
+      @if (Session::has('success'))
+      <div class="alert alert-success" role="alert">
+        {{Session::get('success')}}
+      </div>
+    @endif
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">

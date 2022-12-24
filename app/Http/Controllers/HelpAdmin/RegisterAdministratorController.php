@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\HelpAdmin;
 
+use App\Models\School;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -12,7 +13,8 @@ class RegisterAdministratorController extends Controller
     public function index()
     {
         //
-        return view('helpadmin.register_admin');
+        $school = School::get();
+        return view('helpadmin.register_admin', compact('school'));
     }
 
     public function addAdmin(Request $request) {
@@ -24,10 +26,9 @@ class RegisterAdministratorController extends Controller
             'phone_number' => $request->phone_number,
             'staffID' => $request->staffID,
             'position' => $request->position,
-            'role' => 'administrator',
+            'role' => 'school_admin',
+            'school' => $request->school,
         ]);
-        echo "<script>alert('Admin added');</script>";
-        return redirect()->route('help_admin_home');
-        //return view ('layouts.backend-dashboard.app');
+        return redirect()->route('help_admin_home')->with('success','Administrator Has Been Successfully Registered');
     }
 }

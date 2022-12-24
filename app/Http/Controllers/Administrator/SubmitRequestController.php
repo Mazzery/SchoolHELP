@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Administrator;
 
+use App\Models\RequestData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -28,20 +29,20 @@ class SubmitRequestController extends Controller
     public function create()
     {
         //
+        $request = RequestData::get();
+        return view('request-add', compact('request'));
     }
 
     public function submitRequest(Request $request) {
         $database = DB::table('request_data')->insert([
-            'request_description' => $request->description,
+            'description' => $request->description,
             'proposed_date' => $request->date,
             'student_level' => $request->level,
             'number_of_student' => $request->studentnum,
             'status' => 'NEW',
             'created_at' => now(),
         ]);
-        echo "<script>alert('Submitted Request');</script>";
-        //return view ('layouts.backend-dashboard.app');
-        return redirect()->route('school_admin_home');
+        return redirect()->route('school_admin_home')->with('success','Request Has Been Successfully Submitted');
     }
 
     /**

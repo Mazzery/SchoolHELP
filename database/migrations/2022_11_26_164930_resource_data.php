@@ -16,9 +16,7 @@ return new class extends Migration
         //
         Schema::create('resource_data', function (Blueprint $table) {
             $table->id();
-            $table->string('resource_description');
             $table->string('resource_type');
-            $table->integer('resource_number');
             $table->timestamp('created_at')->nullable();
         });
     }

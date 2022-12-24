@@ -14,11 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/welcome', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
+Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
+Route::get('/request.view', [App\Http\Controllers\Administrator\SubmitRequestController::class, 'create'])->name('request.view');
 Auth::routes();
 
 // Route::get('/', function () {return view('welcome')->name('welcome');});
@@ -33,7 +30,6 @@ Route::middleware(['auth', 'user-access:volunteer'])->group(function () {
 //adminroute
 Route::middleware(['auth', 'user-access:school_help_admin'])->group(function () {
     Route::get('/helpadmin/home', [App\Http\Controllers\HomeController::class, 'helpAdminHome'])->name('help_admin_home');
-    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('help_admin_dashboard');
     Route::get('/registerschool', [App\Http\Controllers\HelpAdmin\RegisterSchoolController::class, 'index'])->name('registerschool');
     Route::get('/registerschooladmin', [App\Http\Controllers\HelpAdmin\RegisterAdministratorController::class, 'index'])->name('registerschooladmin');
     Route::post('/registerschool', [App\Http\Controllers\HelpAdmin\RegisterSchoolController::class, 'addSchool']);
@@ -44,7 +40,6 @@ Route::middleware(['auth', 'user-access:school_help_admin'])->group(function () 
 //ini route untuk schooladmin
 Route::middleware(['auth', 'user-access:school_admin'])->group(function () {
     Route::get('/administrator/home', [App\Http\Controllers\HomeController::class, 'schoolAdminHome'])->name('school_admin_home');
-    Route::get('/administratordashboard', [App\Http\Controllers\Administrator\DashboardController::class, 'index'])->name('administrator_dashboard');
     Route::get('/submitrequest', [App\Http\Controllers\Administrator\SubmitRequestController::class, 'index'])->name('submit_request');
     Route::get('/resourcerequest', [App\Http\Controllers\Administrator\ResourceRequestController::class, 'index'])->name('resource_request');
     Route::post('/submitrequest', [App\Http\Controllers\Administrator\SubmitRequestController::class, 'submitRequest'])->name('add_submit_request');

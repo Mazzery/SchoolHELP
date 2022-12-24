@@ -40,39 +40,19 @@
             </div>
           </div>
         </div>
-        {{-- <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div> --}}
+
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Resource Type" id=type @error('type') is-invalid @enderror name="type" value="{{ old('type') }}" required autocomplete="type" autofocus>
+          <select id="type" name="type" class="form-select form-select-solid form-select-lg fw-bold form-control @error('type') is-invalid @enderror">
+            @foreach ($resource as $resource)  
+            <option value="{{$resource->resource_type}}">{{$resource->resource_type}}</option>
+            @endforeach
+          </select>
           @error('type')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
           @enderror
-          <div class="input-group-append">
-            <div class="input-group-text">
-              
-            </div>
-          </div>
         </div>
-        {{-- <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="E-mail Address" id=email  @error('email') is-invalid @enderror name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-          @error('email')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-          @enderror
-          <div class="input-group-append">
-            <div class="input-group-text"> 
-            </div>
-          </div>
-        </div> --}}
         <div class="input-group mb-3">
           <input type="number" class="form-control" placeholder="Number of Resource" id=resourcenum  @error('resourcenum') is-invalid @enderror name="resourcenum" value="{{ old('resourcenum') }}" required autocomplete="resourcenum" autofocus>
           @error('resourcenum')
@@ -85,32 +65,6 @@
             </div>
           </div>
         </div>
-        {{-- <div class="input-group mb-3">
-          <input type="date" class="form-control" placeholder="Proposed Date" id=date  @error('date') is-invalid @enderror name="date" value="{{ old('date') }}" required autocomplete="date">
-          @error('date')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-          @enderror
-          <div class="input-group-append">
-            <div class="input-group-text">
-            </div>
-          </div>
-        </div> --}}
-
-    
-        {{-- <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Occupation" id=occupation  @error('occupation') is-invalid @enderror name="occupation" value="{{ old('occupation') }}" required autocomplete="occupation" autofocus>
-          @error('occupation')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-          @enderror
-          <div class="input-group-append">
-            <div class="input-group-text">
-            </div>
-          </div>
-        </div> --}}
         
         <div class="container mx-10 text-center",>
           <div class="col-md-20 text-center">
