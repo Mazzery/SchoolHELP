@@ -16,6 +16,7 @@ return new class extends Migration
         //
         Schema::create('request_data', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('school_id')->constrained('school');
             $table->string('description');
             $table->date('proposed_date')->nullable();
             $table->string('student_level')->nullable();
@@ -23,7 +24,9 @@ return new class extends Migration
             $table->string('status')->nullable();
             $table->string('resource_type')->nullable();
             $table->integer('resource_number')->nullable();
+            $table->string('request_type')->nullable();
             $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 
