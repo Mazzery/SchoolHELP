@@ -99,16 +99,16 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a href="{{ route('submit_request') }}" class="nav-link">
               <i class="nav-icon fas fa-plus"></i>
               <p>
                 Submit a Request
               </p>
             </a>
-          </li>
+          </li> --}}
           <li class="nav-item">
-            <a href="{{ route('submit_request') }}" class="nav-link">
+            <a href="javascript:;" onclick="allRequest()" class="nav-link">
               <i class="nav-icon fas fa-plus"></i>
               <p>
                 View all Requests
@@ -163,7 +163,7 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6"> 
+          <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
@@ -181,7 +181,7 @@
           <div class="col-lg-3 col-6">
               </div>
         <!-- /.card -->
-      </div>        
+      </div>
               <!-- /.card-body-->
             <!-- /.card -->
               <!-- /.card-header -->
@@ -202,7 +202,7 @@
     <strong>Copyright &copy; 2022 <a href="https://help.edu.my/">Help University</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-      <b>BIT216</b> Software Engineering Priciples 
+      <b>BIT216</b> Software Engineering Priciples
     </div>
   </footer>
 <script src="inde.js"></script>
@@ -227,5 +227,121 @@
 <script src="/assets/AdminLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/assets/AdminLTE/dist/js/adminlte.js"></script>
+@auth
+    <div class="modal fade" id="modal-request" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-capitalize">All Request</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered" id="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>REQUEST TYPE</th>
+                                <th>DESCRIPTION</th>
+                                <th>DATE POSTED</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse (\App\Models\RequestData::all() as $key => $item)
+                                @php
+                                    $list_status = [
+                                        'pending' => 'warning',
+                                        'new' => 'primary',
+                                        'closed' => 'secondary',
+                                    ];
+                                @endphp
+                                  @if ($item->school->id == Auth::user()->school_id)  
+                                    <tr>
+                                      <td>{{$item->id}}</td>
+                                      <td>{{$item->request_type}}</td>
+                                      <td>{{$item->description}}</td>
+                                      <td>{{$item->created_at->translatedFormat('l, d F Y H:i')}}</td>
+                                      <td><span class="text-capitalize text-white badge badge-{{$list_status[strtolower($item->status)]}}">{{$item->status}}</span></td>
+                                      <td>
+                                          <a href="javascript:;" onclick="modalOffer('{{route('school_admin_home',['detail' => $item->id])}}')" class="btn btn-sm btn-primary">Detail</a>
+                                      </td>
+                                    </tr>
+                                  @endif
+                            @empty
+                            @endforelse
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endauth
+
+    @auth
+    <div class="modal fade" id="modal-offers" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-capitalize">All Offers</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-offers-body"></div>
+            </div>
+        </div>
+    </div>
+    @endauth
+
+    @auth
+    <div class="modal fade" id="modal-review" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-capitalize">Selected Offer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body-review"></div>
+            </div>
+        </div>
+    </div>
+    @endauth
+    <script>
+        function allRequest() {
+            $("#modal-request").modal()
+        }
+        function modalOffer(url) {
+            $("#modal-offers").modal()
+            $.ajax({
+                url: url,
+                type: 'GET',
+                success: function (data) {
+                    $("#modal-offers-body").html(data)
+                },
+                erorr: function (data) {
+                    console.log(data)
+                }
+            })
+        }
+        function modalReview(url) {
+            $("#modal-review").modal()
+            $.ajax({
+                url: url,
+                type: 'GET',
+                success: function (data) {
+                    $("#modal-body-review").html(data)
+                },
+                erorr: function (data) {
+                    console.log(data)
+                }
+            })
+        }
+
+    </script>
 </body>
 </html>
