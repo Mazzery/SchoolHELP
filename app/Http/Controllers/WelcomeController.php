@@ -14,9 +14,9 @@ class WelcomeController extends Controller
 
         // cancel action
 
-        // if(request('cancel')) {
-        //     Offer::find(request('cancel'))->update(['status' => 'canceled']);
-        // }
+        if(request('cancel')) {
+            Offer::find(request('cancel'))->update(['status' => 'canceled']);
+        }
 
         // submit form offer
         if(request()->isMethod('POST')) {
