@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
+Route::post('/', [App\Http\Controllers\WelcomeController::class, 'index']);
+
 Route::get('/request.view', [App\Http\Controllers\Administrator\SubmitRequestController::class, 'create'])->name('request.view');
 Auth::routes();
 
@@ -26,7 +28,7 @@ Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, '
 Route::middleware(['auth', 'user-access:volunteer'])->group(function () {
     Route::get('/volunteer/home', [App\Http\Controllers\HomeController::class, 'volunteerHome'])->name('volunteer_home');
 });
-  
+
 //adminroute
 Route::middleware(['auth', 'user-access:school_help_admin'])->group(function () {
     Route::get('/helpadmin/home', [App\Http\Controllers\HomeController::class, 'helpAdminHome'])->name('help_admin_home');
@@ -35,7 +37,7 @@ Route::middleware(['auth', 'user-access:school_help_admin'])->group(function () 
     Route::post('/registerschool', [App\Http\Controllers\HelpAdmin\RegisterSchoolController::class, 'addSchool']);
     Route::post('/registerschooladmin', [App\Http\Controllers\HelpAdmin\RegisterAdministratorController::class, 'addAdmin']);
 });
-  
+
 
 //ini route untuk schooladmin
 Route::middleware(['auth', 'user-access:school_admin'])->group(function () {

@@ -41,7 +41,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" name="password" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -57,7 +57,7 @@
           @enderror
           <div class="input-group-append">
             <div class="input-group-text">
-              
+
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@
             </span>
           @enderror
           <div class="input-group-append">
-            <div class="input-group-text"> 
+            <div class="input-group-text">
             </div>
           </div>
         </div>
@@ -109,11 +109,11 @@
             </div>
           </div>
         </div>
-        
+
         <div class="input-group mb-3">
-          <select id="school" name="school" class="form-select form-select-solid form-select-lg fw-bold form-control @error('school') is-invalid @enderror">
-            @foreach ($school as $school)  
-            <option value="{{$school->school_name}}">{{$school->school_name}}</option>
+          <select id="school" name="school_id" class="form-select form-select-solid form-select-lg fw-bold form-control @error('school') is-invalid @enderror">
+            @foreach ($school as $school)
+            <option value="{{$school->id}}">{{$school->school_name}}</option>
             @endforeach
           </select>
           @error('school')
@@ -122,7 +122,7 @@
               </span>
           @enderror
       </div>
-        
+
         <div class="container mx-10 text-center",>
           <div class="col-md-20 text-center">
             <button type="submit" class="btn btn-primary btn-block" value="Submit">Register School</button>
