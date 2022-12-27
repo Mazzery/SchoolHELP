@@ -1,12 +1,12 @@
 <?php
-  
+
 namespace App\Http\Controllers\Auth;
-  
+
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
-  
+
 class LoginController extends Controller
 {
     /*
@@ -19,16 +19,16 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
-  
+
     use AuthenticatesUsers;
-  
+
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
-  
+
     /**
      * Create a new controller instance.
      *
@@ -38,29 +38,29 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
- 
+
     public function login(Request $request)
-    {   
+    {
         $input = $request->all();
-     
-        $this->validate($request, [
+
+        $request->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
-     
-        if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password'])))
+
+        if(auth()->attempt(['email' => $input['email'],'password' => $input['password']]))
         {
             if (auth()->user()->role == 'school_admin') {
                 return redirect()->route('school_admin_home');
             }elseif (auth()->user()->role == 'school_help_admin') {
                 return redirect()->route('help_admin_home');
             }elseif (auth()->user()->role == 'volunteer'){
-                return redirect()->route('volunteer_home');
+                return redirect()->route('welcome');
             }
         }else{
             return redirect()->route('login')
                 ->with('error','Email-Address And Password Are Wrong.');
         }
-          
+
     }
 }

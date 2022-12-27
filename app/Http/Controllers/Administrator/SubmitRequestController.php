@@ -34,13 +34,14 @@ class SubmitRequestController extends Controller
     }
 
     public function submitRequest(Request $request) {
-        $database = DB::table('request_data')->insert([
+        RequestData::create([
             'description' => $request->description,
             'proposed_date' => $request->date,
             'student_level' => $request->level,
             'number_of_student' => $request->studentnum,
-            'status' => 'NEW',
-            'created_at' => now(),
+            'request_type' => 'tutorial',
+            'school_id' => auth()->user()->school_id,
+            'status' => 'NEW'
         ]);
         return redirect()->route('school_admin_home')->with('success','Request Has Been Successfully Submitted');
     }

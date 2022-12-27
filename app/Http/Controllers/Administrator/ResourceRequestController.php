@@ -6,6 +6,7 @@ use App\Models\Resource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\RequestData;
 
 class ResourceRequestController extends Controller
 {
@@ -32,12 +33,13 @@ class ResourceRequestController extends Controller
     }
 
     public function resourceRequest(Request $request) {
-        $database = DB::table('request_data')->insert([
+        RequestData::create([
             'description' => $request->description,
             'resource_type' => $request->type,
             'resource_number' => $request->resourcenum,
+            'school_id' => auth()->user()->school_id,
             'status' => 'NEW',
-            'created_at' => now(),
+            'request_type' => 'resource'
         ]);
         return redirect()->route('school_admin_home')->with('success','Resource Has Been Successfully Submitted');
     }

@@ -19,4 +19,5 @@ class Offer extends Model
     public function request_data() {
         return $this->belongsTo(RequestData::class);
     }
+
 }
