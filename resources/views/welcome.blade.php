@@ -34,7 +34,7 @@
                 </ul>
             </nav>
         </div>
-        <div class="content">
+        {{-- <div class="content">
             <h2>WELCOME TO </h2>
             <h1>School<b>HELP</b></h1>
             <p>a web-based school aid distribution and tutorial scheduling system <br> was designed to alleviate the
@@ -52,7 +52,7 @@
                 <button type="button" class="btn-custom" onclick="location.href='#Req'"><span
                         class="span-custom"></span>VIEW ALL REQUEST</button>
             </div>
-        </div>
+        </div> --}}
     </div>
     <section class="about">
         <div class="main">
@@ -158,7 +158,7 @@
         </div>
     </div>
 
-    {{-- @auth
+    @auth
     <div class="modal fade" id="modal-offer" tabindex="-1">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -212,7 +212,7 @@
             </div>
         </div>
     </div>
-    @endauth --}}
+    @endauth
 
     <footer class="main-footer">
         <strong>Copyright &copy; 2022 <a href="https://help.edu.my/">Help University</a>.</strong>
@@ -327,36 +327,36 @@
             })
         }
 
-        function confirm_form(target) {
-            Swal.fire({
-                title: "Are you sure ?",
-                text: "You won't be able to revert this!",
-                type: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes!',
-                cancelButtonText: 'Cancel',
-            }).then((result) => {
-                if (result.value) {
-                    $.ajax({
-                        url: target,
-                        method: "GET",
-                        success: function(data) {
-                            window.location.reload();
-                        },
-                        error: function(data) {
-                            console.log(data);
-                            Swal.fire({
-                                type: 'error',
-                                title: 'Oops!',
-                                text: 'Something went wrong.'
-                            })
-                        }
-                    });
-                }
-            })
-        }
+        // function confirm_form(target) {
+        //     Swal.fire({
+        //         title: "Are you sure ?",
+        //         text: "You won't be able to revert this!",
+        //         type: 'warning',
+        //         showCancelButton: true,
+        //         confirmButtonColor: '#3085d6',
+        //         cancelButtonColor: '#d33',
+        //         confirmButtonText: 'Yes!',
+        //         cancelButtonText: 'Cancel',
+        //     }).then((result) => {
+        //         if (result.value) {
+        //             $.ajax({
+        //                 url: target,
+        //                 method: "GET",
+        //                 success: function(data) {
+        //                     window.location.reload();
+        //                 },
+        //                 error: function(data) {
+        //                     console.log(data);
+        //                     Swal.fire({
+        //                         type: 'error',
+        //                         title: 'Oops!',
+        //                         text: 'Something went wrong.'
+        //                     })
+        //                 }
+        //             });
+        //         }
+        //     })
+        // }
 
     </script>
 
