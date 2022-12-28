@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>  
+<html>
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
@@ -25,8 +25,8 @@
                 <h1>SCHOOL HELP</h1>
                 <p>a web-based school aid distribution and tutorial scheduling system <br> was designed to alleviate the negative impact of the coronavirus pandemic to schools and students. </p>
                 <div><a href="{{route('register')}}">
-                    <button type ="button"><span></span>REGISTER NOW</button></a>
-                    <button type ="button" onclick="location.href='#Req'"><span></span>VIEW ALL REQUEST</button>
+                    <button class="btn-custom" type ="button"><span class="span-custom"></span>REGISTER NOW</button></a>
+                    <button class="btn-custom" type ="button" onclick="location.href='#Req'"><span class="span-custom"></span>VIEW ALL REQUEST</button>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
 			<img src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80">
 			<div class="about-text">
 				<h2>SchoolHelp</h2>
-				<h5>Group Leader<span>& Designer</span></h5>
+				<h5>Group Leader<span class="span-custom">& Designer</span></h5>
 				<p>SchoolHELP is a web-based school aid distribution and tutorial scheduling system that was designed to alleviate the negative impact of the coronavirus pandemic to schools and students. Registered SchoolHELP administrators will be able to register schools and their respected School Administrators into the system. Once registered, School Administrators will be able to submit two types of requests into the system, they are: tutorial request and resource request.</p>
 			</div>
 		</div>
@@ -88,7 +88,7 @@
             <strong>Copyright &copy; 2022 <a href="https://help.edu.my/">Help University</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
-              <b>BIT216</b> Software Engineering Priciples 
+              <b>BIT216</b> Software Engineering Priciples
             </div>
           </footer>
     </body>

@@ -99,14 +99,14 @@
           </li>
           <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-plus"></i>
+              <i class="nav-icon fas fa-list"></i>
               <p>
-                Register a School
-                <span class="right badge badge-danger">New</span>
+                My Offers
+                <span class="right badge badge-danger">{{\App\Models\Offer::count()}}</span>
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a href="pages/calendar.html" class="nav-link">
               <i class="nav-icon fas fa-plus"></i>
               <p>
@@ -114,6 +114,7 @@
                 <span class="badge badge-info right">2</span>
               </p>
             </a>
+          </li> --}}
       </nav>
       <!-- /.sidebar-menu -->
     </div>
@@ -303,7 +304,7 @@
           </div>
         </div>
         <!-- /.card -->
-      </div>        
+      </div>
               <!-- /.card-body-->
             <!-- /.card -->
               <!-- /.card-header -->
@@ -324,7 +325,7 @@
     <strong>Copyright &copy; 2022 <a href="https://help.edu.my/">Help University</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-      <b>BIT216</b> Software Engineering Priciples 
+      <b>BIT216</b> Software Engineering Priciples
     </div>
   </footer>
 <script src="inde.js"></script>
