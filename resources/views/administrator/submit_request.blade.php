@@ -36,18 +36,11 @@
           @enderror
           <div class="input-group-append">
             <div class="input-group-text">
-              {{-- <span class="fas fa-user"></span> --}}
+            
             </div>
           </div>
         </div>
-        {{-- <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div> --}}
+      
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Student Level" id=level @error('level') is-invalid @enderror name="level" value="{{ old('level') }}" required autocomplete="level" autofocus>
           @error('level')
@@ -61,18 +54,7 @@
             </div>
           </div>
         </div>
-        {{-- <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="E-mail Address" id=email  @error('email') is-invalid @enderror name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-          @error('email')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-          @enderror
-          <div class="input-group-append">
-            <div class="input-group-text"> 
-            </div>
-          </div>
-        </div> --}}
+       
         <div class="input-group mb-3">
           <input type="number" class="form-control" placeholder="Number of Student" id=studentnum  @error('studentnum') is-invalid @enderror name="studentnum" value="{{ old('studentnum') }}" required autocomplete="studentnum" autofocus>
           @error('studentnum')
@@ -96,22 +78,7 @@
             <div class="input-group-text">
             </div>
           </div>
-        </div>
-
-    
-        {{-- <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Occupation" id=occupation  @error('occupation') is-invalid @enderror name="occupation" value="{{ old('occupation') }}" required autocomplete="occupation" autofocus>
-          @error('occupation')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-          @enderror
-          <div class="input-group-append">
-            <div class="input-group-text">
-            </div>
-          </div>
-        </div> --}}
-        
+        </div>     
         <div class="container mx-10 text-center",>
           <div class="col-md-20 text-center">
             <button type="submit" class="btn btn-primary btn-block" value="Submit">Submit</button>
