@@ -26,7 +26,7 @@
                 <ul>
                     <li>
                         @auth
-                        <a href="javascript:;" onclick="logout()">Logout</a>
+                        <a href="javascript:;" onclick="logout()">{{auth()->user()->name}} Logout !</a>
                         @else
                         <a href="{{route('login')}}">LOGIN</a>
                         @endauth
@@ -35,7 +35,7 @@
             </nav>
         </div>
         <div class="content">
-            <h2>Welcome to</h2>
+            <h2>WELCOME TO </h2>
             <h1>School<b>HELP</b></h1>
             <p>a web-based school aid distribution and tutorial scheduling system <br> was designed to alleviate the
                 negative impact of the coronavirus pandemic to schools and students. </p>
@@ -111,41 +111,6 @@
                 @endforeach
             </div>
         </div>
-
-        {{-- <div class="card">
-                <i class="far fa-user"></i>
-				<h5> I Want Glue For Kids</h5>
-				<div class="pra">
-					<p>Once registered, School Administrators will be able to submit two types of requests into the system</p>
-					<p style="text-align: center;">
-						<a class="btton" href="#">Visit School</a>
-					</p>
-				</div>
-			</div>
-
-			<div class="card">
-				<i class="far fa-user"></i>
-				<h5>I Want Glue For Kids</h5>
-				<div class="pra">
-                <p>Once registered, School Administrators will be able to submit two types of requests into the system</p>
-
-					<p style="text-align: center;">
-						<a class="btton" href="#">Visit School</a>
-					</p>
-				</div>
-			</div>
-
-			<div class="card">
-                <i class="far fa-user"></i>
-				<h5>I Want Glue For Kids</h5>
-				<div class="pra">
-                <p>Once registered, School Administrators will be able to submit two types of requests into the system</p>
-
-					<p style="text-align: center;">
-						<a class="btton" href="#">Visit School</a>
-					</p>
-				</div>
-			</div> --}}
     </div>
     </div>
 
@@ -187,7 +152,6 @@
                         <div class="form-group">
                             <button type="submit" class="btn btn-outline-primary btn-block">Submit</button>
                         </div>
-
                     </form>
                 </div>
             </div>
