@@ -32,6 +32,7 @@ class WelcomeController extends Controller
                 'remarks' => request('remarks'),
                 'status' => 'pending'
             ]);
+            $request_data->update(['status' => 'pending']);
             session()->forget('offer');
             return redirect()->route('welcome')->with('success','Offer sent successfully');
         }

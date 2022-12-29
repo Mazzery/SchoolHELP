@@ -26,7 +26,7 @@
                 <ul>
                     <li>
                         @auth
-                        <a href="javascript:;" onclick="logout()">{{auth()->user()->name}} Logout !</a>
+                        <a href="javascript:;" onclick="logout()">Logout</a>
                         @else
                         <a href="{{route('login')}}">LOGIN</a>
                         @endauth
@@ -35,7 +35,7 @@
             </nav>
         </div>
         <div class="content">
-            <h2>WELCOME TO </h2>
+            <h2>Welcome to</h2>
             <h1>School<b>HELP</b></h1>
             <p>a web-based school aid distribution and tutorial scheduling system <br> was designed to alleviate the
                 negative impact of the coronavirus pandemic to schools and students. </p>
@@ -195,7 +195,7 @@
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{$item->request_data->school->school_name}}</td>
                                     <td>{{$item->created_at->translatedFormat('l, d F Y H:i')}}</td>
-                                    <td>{{$item->request_data->resource_type}}</td>
+                                    <td>{{$item->request_data->request_type}}</td>
                                     <td>{{$item->remarks}}</td>
                                     <td><span class="text-capitalize text-white badge badge-{{$list_status[$item->status]}}">{{$item->status}}</span></td>
                                     <td>
